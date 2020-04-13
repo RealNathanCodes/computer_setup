@@ -1,2 +1,0 @@
-/etc/fstab
-UUID=FC665D05665CC256 /mnt/seagate auto nosuid,nodev,nofail,x-gvfs-show 0 0

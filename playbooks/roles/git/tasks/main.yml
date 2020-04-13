@@ -1,0 +1,33 @@
+---
+
+- name: Install needed Git packages with apt
+  apt:
+    name:
+    - git
+    - libsecret-1-0 
+    - libsecret-1-dev
+    - gnome-keyring
+    state: present
+  become: true
+  when: ansible_distribution == "Ubuntu"
+
+- name: Build libsecret git credential helper
+  make:
+    chdir: /usr/share/doc/git/contrib/credential/libsecret
+  when: ansible_distribution == "Ubuntu"
+
+- name: Install needed Git packages with pacman
+  pacman:
+    name:
+      - git
+      - libsecret
+      - gnome-keyring
+    state: present
+  become: true
+  when: ansible_distribution == "Archlinux"
+
+- name: Create .gitconfig
+  template:
+    src: gitconfig.j2
+    dest: ~/.gitconfig
+    mode: '0660'

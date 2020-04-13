@@ -1,0 +1,15 @@
+---
+
+- name: Update apt packages
+  apt:
+    update_cache: yes
+    cache_valid_time: 3600
+  become: true
+  when: ansible_distribution == "Ubuntu"
+
+- name: Update pacman packages
+  pacman:
+    update_cache: yes
+    upgrade: yes
+  become: true
+  when: ansible_distribution == "Archlinux"

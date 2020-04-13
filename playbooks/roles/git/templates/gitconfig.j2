@@ -1,0 +1,27 @@
+[user]
+{% if git_name is defined %}
+  name = {{ git_name }}
+{% endif %}
+{% if git_email is defined %}
+  email = {{ git_email }}
+{% endif %}
+{% if git_signingkey is defined %}
+  signingkey = {{ git_signingkey }}
+{% endif %}
+{% if github_username is defined %}
+[credential "https://github.com"]
+  username = {{ github_username }}
+{% endif %}
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+[apply]
+  whitespace = nowarn
+{% if ansible_distribution == "Archlinux" %}
+[credential]
+  helper = /usr/lib/git-core/git-credential-libsecret
+{% else %}
+[credential]
+  helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+{% endif %}

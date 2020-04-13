@@ -1,0 +1,25 @@
+- name: Set up the main machine
+  hosts: local
+
+  pre_tasks:
+  - name: Load the user configuration
+    include_vars:
+      dir: vars
+    tags: [ always ]
+
+  roles:
+    # If we tag each rule, then we can run things with the --tags command
+    - role: makemkv
+      tags: [ ripdvd ]
+    - role: handbrake
+      tags: [ ripdvd ]
+    - role: k3b
+      tags: [ ripcd ]
+    - role: kid3
+      tags: [ ripcd ]
+    - role: git
+      tags: [ development, git ]
+    - role: visual-studio-code
+      tags: [ development, visual-studio-code ]
+    - role: nodejs
+      tags: [ development, nodejs ]

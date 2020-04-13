@@ -1,0 +1,16 @@
+---
+
+- name: Install MakeMkv
+  snap:
+    name: makemkv
+    channel: latest/stable
+  become: true
+
+- name: Connect MakeMkv to the hardware
+  become: yes
+  become_method: sudo
+  changed_when: false
+  shell: 'snap connect {{ item.app }}:{{ item.plug }}'
+  with_items:
+    - app: makemkv
+      plug: hardware-observe

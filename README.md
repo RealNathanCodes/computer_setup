@@ -1,3 +1,7 @@
+I've not had a chance to test the apt branches yet, I've only tested this on Manjaro so far
+
+
+
 # Ansible Server bootstrapper
 
 All of the machines and virtual machines in my infrastructure should be controlled from this the machine that this ansible bootstrapper is run on. 

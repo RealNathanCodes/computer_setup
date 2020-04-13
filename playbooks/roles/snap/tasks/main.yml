@@ -1,0 +1,15 @@
+---
+
+- name: Install snapd with apt
+  apt:
+    name: snapd
+    state: present
+  become: true
+  when: ansible_distribution == "Ubuntu"
+
+- name: Install snapd with pacman
+  pacman:
+    name: snapd
+    state: present
+  become: true
+  when: ansible_distribution == "Archlinux"

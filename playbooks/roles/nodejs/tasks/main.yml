@@ -1,0 +1,15 @@
+---
+
+- name: Install nodejs and npm with apt
+  apt:
+    name: nodejs
+    state: present
+  become: true
+  when: ansible_distribution == "Ubuntu"
+
+- name: Install nodejs and npm with pacman
+  pacman:
+    name: npm
+    state: present
+  become: true
+  when: ansible_distribution == "Archlinux"
