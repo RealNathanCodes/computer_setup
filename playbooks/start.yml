@@ -23,3 +23,5 @@
       tags: [ development, visual-studio-code ]
     - role: nodejs
       tags: [ development, nodejs ]
+    - role: slack
+      tags: [ chat ]

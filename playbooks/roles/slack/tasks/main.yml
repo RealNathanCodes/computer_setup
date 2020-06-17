@@ -1,0 +1,8 @@
+---
+
+- name: Install Slack
+  snap:
+    name: slack
+    classic: yes
+    channel: latest/stable
+  become: true
