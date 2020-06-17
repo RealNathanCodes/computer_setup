@@ -1,5 +1,8 @@
 I've not had a chance to test the apt branches yet, I've only tested this on Manjaro so far
 
+# Things I want to get working
+* Install docker (make sure to set it to start at startup (or do I want that only on servers?)) (this may require adding my user to a newly created docker group)
+* Install docker compose
 
 
 # Ansible Server bootstrapper
