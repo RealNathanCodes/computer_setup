@@ -1,0 +1,6 @@
+
+- name: Install Gimp
+  snap:
+    name: gimp
+    channel: latest/stable
+  become: true

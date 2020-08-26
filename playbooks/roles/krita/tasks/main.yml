@@ -1,0 +1,6 @@
+
+- name: Install Krita
+  snap:
+    name: krita
+    channel: latest/stable
+  become: true
