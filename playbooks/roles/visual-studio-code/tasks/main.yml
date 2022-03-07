@@ -44,3 +44,5 @@
   command: "code --install-extension {{ item }}"
   loop:
     - ms-vscode-remote.remote-containers
+    - ms-azuretools.vscode-docker
+    - theaflowers.witch-hazel

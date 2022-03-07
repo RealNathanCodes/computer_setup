@@ -1,0 +1,4 @@
+add fish
+Add Firacode install
+add starship install
+use the custom stuff in starship.zip to update the bash shell to load fish and to have fish use the starship prompt
