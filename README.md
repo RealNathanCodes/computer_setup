@@ -1,3 +1,10 @@
+For Linux machines use ansible, which you can start just by running `./run.sh`
+For Windows machines Look in the chocolatey directory
+
+
+
+
+
 I've not had a chance to test the apt branches yet, I've only tested this on Manjaro so far
 
 # Things I want to get working
